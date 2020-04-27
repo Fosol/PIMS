@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CI: true
+      working-directory: ./frontend
 
     strategy:
       matrix:
@@ -23,5 +24,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+        working-directory: ${{env.working-directory}}
       - run: npm run build --if-present
+        working-directory: ${{env.working-directory}}
       - run: npm test
+        working-directory: ${{env.working-directory}}
