@@ -49,6 +49,7 @@ const SubmitProperty = (props: any) => {
       dispatch(fetchParcelDetail({ id: parseInt(parcelId) }));
     }
     dispatch(clearClickLatLng());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   //Add a pin to the map where the user has clicked.
   React.useEffect(() => {
@@ -68,6 +69,7 @@ const SubmitProperty = (props: any) => {
         );
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [leafletMouseEvent]);
   return (
     <Row className="submitProperty">

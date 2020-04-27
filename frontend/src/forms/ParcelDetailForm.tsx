@@ -129,7 +129,7 @@ const ParcelDetailForm = (props: ParcelPropertyProps) => {
                 .then(() => {
                   history.goBack();
                 })
-                .error((error: FormikErrors<IParcel>) => {
+                .catch((error: FormikErrors<IParcel>) => {
                   //swallow, allow global error handling.
                   //TODO: display errors on specific fields based on the error.
                 })

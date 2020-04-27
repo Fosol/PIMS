@@ -13,6 +13,7 @@ import { useKeycloak } from '@react-keycloak/web';
 import { mountToJson } from 'enzyme-to-json';
 import SubmitProperty from './SubmitProperty';
 
+jest.mock('./MapView', () => () => <div id="mockMapView"></div>);
 jest.mock('@react-keycloak/web');
 Enzyme.configure({ adapter: new Adapter() });
 (useKeycloak as jest.Mock).mockReturnValue({

@@ -30,7 +30,7 @@ export const FormikDatePicker: FunctionComponent<any> = ({ ...props }) => {
           setFieldValue(
             field.name,
             moment(val)
-              .add('day', 1)
+              .add(1, 'day')
               .format('YYYY-MM-DD'),
           );
         }}
