@@ -89,5 +89,3 @@ reportgenerator "-reports:./tests/TestResults/coverage.xml" "-targetdir:./tests/
 
 start ./tests/TestResults/Coverage/summary.htm
 ```
-
-test
