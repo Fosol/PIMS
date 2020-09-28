@@ -20,6 +20,8 @@ COPY ches/*.csproj ches/
 COPY notifications/*.csproj notifications/
 COPY core/*.csproj core/
 
+asdfasdfsadfsda
+
 RUN dotnet restore
 ENV PATH="$PATH:/root/.dotnet/tools"
 RUN dotnet tool install --global dotnet-ef --version 3.1.0
